@@ -3,14 +3,17 @@
 var React = require('react');
 var Router = require('react-router');
 var Link = Router.Link;
-var Navbar = require('../Navbar/Navbar');
 
 var Header = React.createClass({
     render: function () {
         return (
             <div>
-                <Navbar />
-                s
+                <div className="jumbotron">
+                    <div className="container">
+                        <h1>React JS Navigation Demo</h1>
+                        <p>Use React's navigation to select different pages.</p>
+                    </div>
+                </div>
             </div>
         );
     }
