@@ -3,16 +3,16 @@
 var React = require('react');
 
 var SearchBar = React.createClass({
-    render: function() {
+    render: function () {
         return (
-            <form>
-                <input type="text" placeholder="Search..." />
-                <p>
-                    <input type="checkbox" />
-                    {' '}
-                    Only show products in stock
-                </p>
-            </form>
+            <div>
+                <form>
+                    <input type="text" className="form-control" placeholder="Search..."/>
+                    <div className="checkbox">
+                        <label><input type="checkbox" value="">Only show products in stock</input></label>
+                    </div>
+                </form>
+            </div>
         );
     }
 });

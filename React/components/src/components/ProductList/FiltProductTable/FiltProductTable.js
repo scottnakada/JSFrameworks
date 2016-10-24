@@ -7,12 +7,12 @@ var ProductTable = require('./ProductTable/ProductTable');
 var FiltProductTable = React.createClass({
     render: function () {
         return (
-            <div>
-                <div className="card">
-                    <div className="card-header">
+            <div className="col-xs-4 col-xs-offset-4">
+                <div className="panel panel-primary">
+                    <div className="panel-heading">
                         <SearchBar />
                     </div>
-                    <div className="card-body">
+                    <div className="panel-body">
                         <ProductTable products={this.props.products}/>
                     </div>
                 </div>
