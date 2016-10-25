@@ -11,6 +11,12 @@ var FiltProductTable = React.createClass({
             inStockOnly: false
         }
     },
+    handleUserInput: function (filterText, inStockOnly) {
+        this.setState({
+            filterText: filterText,
+            inStockOnly: inStockOnly
+        });
+    },
     render: function () {
         return (
             <div className="col-xs-4 col-xs-offset-4">
@@ -19,6 +25,7 @@ var FiltProductTable = React.createClass({
                         <SearchBar
                             filterText={this.state.filterText}
                             inStockOnly={this.state.inStockOnly}
+                            onUserInput={this.handleUserInput}
                         />
                     </div>
                     <div className="panel-body">
