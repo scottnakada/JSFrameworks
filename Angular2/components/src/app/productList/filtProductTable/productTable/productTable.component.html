@@ -1,0 +1,13 @@
+<table class="table table-bordered table-hover">
+    <thead>
+    <tr class="table-info">
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody ng-init="lastCategory = '' ">
+    <tr *ngFor="let product of products">
+        <td>{{product.name}}</td><td>{{product.price}}</td>
+    </tr>
+    </tbody>
+</table>
