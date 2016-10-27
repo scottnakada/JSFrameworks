@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { ProductClass } from '../product-class';
+import { ProductClass } from '../productClass';
 
 @Component({
     moduleId: module.id,
@@ -12,6 +12,9 @@ import { ProductClass } from '../product-class';
 export class FiltProductTableComponent {
 
     @Input() products: ProductClass[];
+
+    searchText: string = '';
+    inStockOnly: boolean = false;
 
     constructor() {
 

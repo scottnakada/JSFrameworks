@@ -1,10 +1,17 @@
 <div class="col-xs-4 col-xs-offset-4">
     <div class="card">
         <div class="card-header card-primary">
-        <searchBar></searchBar>
+        <searchBar
+            [searchText]="searchText"
+            [inStockOnly]="inStockOnly"
+        ></searchBar>
         </div>
         <div class="card-block">
-            <productTable [products]="products"></productTable>
+            <productTable
+                [searchText]="searchText"
+                [inStockOnly]="inStockOnly"
+                [products]="products"
+            ></productTable>
         </div>
     </div>
 </div>

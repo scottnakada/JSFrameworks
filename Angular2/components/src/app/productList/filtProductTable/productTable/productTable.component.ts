@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit, OnChanges, SimpleChange, AfterViewChecked } from '@angular/core';
 
-import { ProductClass } from '../../product-class';
+import { ProductClass } from '../../productClass';
 
 @Component({
     moduleId: module.id,
@@ -9,12 +9,46 @@ import { ProductClass } from '../../product-class';
     styleUrls: ['./productTable.component.css']
 })
 
-export class ProductTableComponent {
+export class ProductTableComponent implements OnChanges, OnInit {
 
     @Input() products: ProductClass[];
+    @Input() searchText: string;
+    @Input() inStockOnly: boolean;
+
+    lastCategory: '';
+    filtProductList: ProductClass[];
 
     constructor() {
 
+    }
+
+    ngAfterViewChecked() {
+        this.lastCategory = '';
+    }
+
+    ngOnInit() {
+        this.lastCategory = '';
+    }
+
+    ngOnChanges(changes: {[propertyName: string]: SimpleChange}) {
+        this.lastCategory = '';
+        this.filtProductList = [];
+        for (let product of this.products) {
+            if (product.name.indexOf(this.searchText) === -1 ||
+                (!product.stocked && this.inStockOnly)) {
+            } else {
+                this.filtProductList.push(product);
+            }
+        }
+    }
+
+
+    isNewCategory(category, product) {
+        if (category == this.lastCategory) {
+            return false;
+        }
+        this.lastCategory = category;
+        return true;
     }
 
 }

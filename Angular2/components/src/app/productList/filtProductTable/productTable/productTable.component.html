@@ -1,13 +1,22 @@
-<table class="table table-bordered table-hover">
-    <thead>
-    <tr class="table-info">
-        <th>Name</th>
-        <th>Price</th>
-    </tr>
-    </thead>
-    <tbody ng-init="lastCategory = '' ">
-    <tr *ngFor="let product of products">
-        <td>{{product.name}}</td><td>{{product.price}}</td>
-    </tr>
-    </tbody>
-</table>
+<div class="card-group">
+    <div class="card card-info">
+        <div class="card-block">
+            <h4 class="text-xs-center">Name</h4>
+        </div>
+    </div>
+    <div class="card card-info">
+        <div class="card-block">
+            <h4 class="text-xs-center">Price</h4>
+        </div>
+    </div>
+</div>
+<div *ngFor="let product of filtProductList">
+    <productCategoryRow
+        [category]="product.category"
+        [hidden]="!isNewCategory(product.category, product)"
+    ></productCategoryRow>
+
+    <productRow
+        [product]="product"
+    ></productRow>
+</div>

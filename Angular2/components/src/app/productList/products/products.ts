@@ -1,4 +1,4 @@
-import { ProductClass } from '../product-class';
+import { ProductClass } from '../productClass';
 
 export const PRODUCTS: ProductClass[] = [
     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},

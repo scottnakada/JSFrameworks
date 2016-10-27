@@ -15,6 +15,8 @@ import { ProductListComponent } from './productList';
 import { FiltProductTableComponent } from './productList/filtProductTable';
 import { SearchBarComponent } from './productList/filtProductTable/searchBar';
 import { ProductTableComponent } from './productList/filtProductTable/productTable';
+import { ProductCategoryRowComponent } from './productList/filtProductTable/productTable/productCategoryRow';
+import { ProductRowComponent } from './productList/filtProductTable/productTable/productRow';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -37,7 +39,9 @@ import { AppRoutingModule } from './app-routing.module';
         ProductListComponent,
         FiltProductTableComponent,
         SearchBarComponent,
-        ProductTableComponent
+        ProductTableComponent,
+        ProductCategoryRowComponent,
+        ProductRowComponent
     ],
     providers: [
 

@@ -1,7 +1,19 @@
 <form>
-    <input type="text" class="form-control" placeholder="Search..." id="filterTextInput" />
+    <input
+        type="text"
+        class="form-control"
+        placeholder="Search..."
+        id="filterTextInput"
+        name="searchText"
+        [(ngModel)]="searchText"
+    />
     <label class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input">
+        <input
+            type="checkbox"
+            class="custom-control-input"
+            name="inStockOnly"
+            [(ngModel)]="inStockOnly"
+        />
         <span class="custom-control-indicator"></span>
         <span class="custom-control-description">Only show products in stock</span>
     </label>
