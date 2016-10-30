@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { enableProdMode, Component } from '@angular/core';
+
+enableProdMode();
 
 @Component({
     selector: 'app',

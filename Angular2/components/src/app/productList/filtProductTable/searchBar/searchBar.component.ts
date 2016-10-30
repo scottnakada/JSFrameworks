@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     moduleId: module.id,
@@ -10,10 +10,20 @@ import { Component, Input } from '@angular/core';
 export class SearchBarComponent {
 
     @Input() searchText: string;
+    @Output() searchTextChange: EventEmitter<string> = new EventEmitter<string>();
     @Input() inStockOnly: boolean;
+    @Output() inStockOnlyChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
     constructor() {
 
     }
 
+    onSearchTextChange() {
+        this.searchTextChange.emit(this.searchText);
+    }
+
+    onInStockOnlyChange(element: HTMLInputElement) {
+        this.inStockOnly = element.checked;
+        this.inStockOnlyChange.emit(this.inStockOnly)
+    }
 }

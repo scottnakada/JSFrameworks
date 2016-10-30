@@ -1,6 +1,6 @@
-import { Component, Input, OnInit, OnChanges, SimpleChange, AfterViewChecked } from '@angular/core';
+import {Component, Input, OnInit, OnChanges, SimpleChange, AfterViewChecked} from '@angular/core';
 
-import { ProductClass } from '../../productClass';
+import {ProductClass} from '../../productClass';
 
 @Component({
     moduleId: module.id,
@@ -12,8 +12,8 @@ import { ProductClass } from '../../productClass';
 export class ProductTableComponent implements OnChanges, OnInit {
 
     @Input() products: ProductClass[];
-    @Input() searchText: string;
-    @Input() inStockOnly: boolean;
+    @Input() searchText: string = '';
+    @Input() inStockOnly: boolean = false;
 
     lastCategory: '';
     filtProductList: ProductClass[];
@@ -30,7 +30,7 @@ export class ProductTableComponent implements OnChanges, OnInit {
         this.lastCategory = '';
     }
 
-    ngOnChanges(changes: {[propertyName: string]: SimpleChange}) {
+    ngOnChanges(changes: {[propKey: string]: SimpleChange}) {
         this.lastCategory = '';
         this.filtProductList = [];
         for (let product of this.products) {
@@ -41,7 +41,6 @@ export class ProductTableComponent implements OnChanges, OnInit {
             }
         }
     }
-
 
     isNewCategory(category, product) {
         if (category == this.lastCategory) {
