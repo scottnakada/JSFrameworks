@@ -10,8 +10,8 @@ var Header = React.createClass({
             <div>
                 <div className="jumbotron">
                     <div className="container">
-                        <h1>React JS Navigation Demo</h1>
-                        <p>Use React's navigation to select different pages.</p>
+                        <h1>React Components Demo</h1>
+                        <p>Use React components to build a product list.</p>
                     </div>
                 </div>
             </div>
