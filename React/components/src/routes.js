@@ -20,8 +20,6 @@ var routes = (
     <Route name="app" path="/" handler={require('./components/App/App')}>
         /* Our default route will load the homePage */
         <DefaultRoute handler={require('./components/Home/Home')}/>
-        /* /product-list will load the Product List page */
-        <Route name="product-list" handler={require('./components/ProductList/ProductList')}/>
         /* /privacy will load the privacy page */
         <Route name="privacy" handler={require('./components/Privacy/Privacy')}/>
         /* /about will load the aboutPage */

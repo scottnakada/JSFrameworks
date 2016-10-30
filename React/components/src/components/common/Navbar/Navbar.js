@@ -25,7 +25,6 @@ var Navbar = React.createClass({
                             <ul className="nav navbar-nav">
                                 <li className="active"><Link to="app">Home<span className="sr-only">(current)</span></Link>
                                 </li>
-                                <li><Link to="product-list">Product List</Link></li>
                             </ul>
 
                             <ul className="nav navbar-nav navbar-right">
