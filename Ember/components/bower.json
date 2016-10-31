@@ -1,10 +1,9 @@
 {
-  "name": "routing",
+  "name": "components",
   "dependencies": {
-    "ember": "^2.9.0",
-    "ember-cli-shims": "^0.1.3",
-    "ember-qunit-notifications": "^0.1.0",
-    "jquery": "^1.12.4",
+    "ember": "~2.9.0",
+    "ember-cli-shims": "0.1.3",
+    "query": "^0.0.2",
     "bootstrap-sass": "^3.3.7"
   }
 }
