@@ -18,7 +18,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
  */
 const HMR = helpers.hasProcessFlag('hot');
 const METADATA = {
-  title: 'Angular 2, Bootstrap, Webpack',
+  title: 'Angular 2 Components',
   description: 'Angular 2 App, Styling with Bootstrap, Built with Webpack',
   baseUrl: '/',
   isDevServer: helpers.isWebpackDevServer()
