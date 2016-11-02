@@ -1,0 +1,24 @@
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <table class="table">
+            <thead>
+            <tr>
+                <td style="text-align:center"><strong>Name</strong></td>
+                <td style="text-align:center"><strong>Price</strong></td>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="panel-body">
+        <div class="list-group">
+          {{product-category-row category='Sports'}}
+          {{product-row name='Football' price='$45'}}
+          {{product-row name='Basketball' price='$25'}}
+          {{product-row name='Baseball' price='$15'}}
+          {{product-category-row category='Electronics'}}
+          {{product-row name='Watch' price='$25'}}
+          {{product-row name='Alarm Clock' price='$15'}}
+        </div>
+    </div>
+</div>
+{{yield}}
